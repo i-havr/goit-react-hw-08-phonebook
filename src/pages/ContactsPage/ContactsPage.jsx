@@ -18,7 +18,7 @@ import { ContactsList } from 'components/ContactsList/ContactsList';
 import { Filter } from 'components/Filter/Filter';
 import { Loader } from 'components/Loader/Loader';
 
-export const ContactsPage = () => {
+export default function ContactsPage() {
   const isLoading = useSelector(selectLoadingStatus);
   const error = useSelector(selectError);
 
@@ -44,4 +44,4 @@ export const ContactsPage = () => {
       </SectionStyled>
     </ContactsPageStyled>
   );
-};
+}

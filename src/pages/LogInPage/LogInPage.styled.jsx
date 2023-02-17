@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const LogInPageStyled = styled.main`
   display: block;
@@ -31,8 +32,13 @@ export const ContainerStyled = styled.div`
   margin-right: auto;
 
   & > h1 {
-    font-size: 22px;
     margin-bottom: 32px;
+    font-size: 22px;
+  }
+
+  & > p {
+    margin-top: 16px;
+    font-size: 14px;
   }
 
   @media screen and (min-width: 768px) {
@@ -96,4 +102,9 @@ export const InputStyled = styled.input`
   border-radius: 3px;
   margin-left: auto;
   padding: 4px;
+`;
+
+export const LinkStyled = styled(Link)`
+  font-weight: bold;
+  color: #729599;
 `;

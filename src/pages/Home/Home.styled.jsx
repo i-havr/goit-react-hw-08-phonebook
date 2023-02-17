@@ -16,7 +16,7 @@ export const SectionStyled = styled.section`
 
   @media screen and (min-width: 1200px) {
     max-width: 1600px;
-    padding: 64px 0px 32px 0px;
+    padding: 32px 0px 32px 0px;
   }
 `;
 

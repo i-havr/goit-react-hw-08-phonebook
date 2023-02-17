@@ -9,6 +9,7 @@ import {
   FormStyled,
   LabelStyled,
   InputStyled,
+  LinkStyled,
 } from './LogInPage.styled';
 import { Button } from 'components/Button/Button';
 
@@ -64,6 +65,10 @@ export default function LogInPage() {
 
             <Button>Log in</Button>
           </FormStyled>
+          <p>
+            Not registered yet?{' '}
+            <LinkStyled to={'/register'}>Sign up!</LinkStyled>
+          </p>
           <Toaster />
         </ContainerStyled>
       </SectionStyled>

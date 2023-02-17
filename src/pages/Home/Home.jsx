@@ -16,14 +16,14 @@ export default function Home() {
           <TextWrapperStyled>
             <p>
               Already with us?{' '}
-              <LinkStyled to={'login'}>
+              <LinkStyled to={'/login'}>
                 <b>Log in!</b>
               </LinkStyled>
             </p>
             <p>
               Not yet?{' '}
-              <LinkStyled to={'register'}>
-                <b>Sign in!</b>
+              <LinkStyled to={'/register'}>
+                <b>Sign up!</b>
               </LinkStyled>
             </p>
           </TextWrapperStyled>

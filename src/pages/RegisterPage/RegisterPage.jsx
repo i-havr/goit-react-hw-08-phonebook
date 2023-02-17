@@ -9,6 +9,7 @@ import {
   FormStyled,
   LabelStyled,
   InputStyled,
+  LinkStyled,
 } from './RegisterPage.styled';
 import { Button } from 'components/Button/Button';
 
@@ -76,6 +77,9 @@ export default function RegisterPage() {
             </LabelStyled>
             <Button>Create account</Button>
           </FormStyled>
+          <p>
+            Already registered? <LinkStyled to={'/login'}> Log in!</LinkStyled>
+          </p>
           <Toaster />
         </ContainerStyled>
       </SectionStyled>
