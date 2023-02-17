@@ -4,14 +4,11 @@ import { Link } from 'react-router-dom';
 export const HomeStyled = styled.main`
   display: block;
   width: 100%;
-  height: 100%;
+  padding: 32px 0px;
 `;
 
 export const SectionStyled = styled.section`
-  display: block;
-
   @media screen and (min-width: 768px) {
-    padding: 32px 0px;
   }
 
   @media screen and (max-width: 1200px) {
@@ -70,6 +67,7 @@ export const TextWrapperStyled = styled.div`
     flex-direction: row;
 
     & > p:not(:last-child) {
+      margin-bottom: 0;
       margin-right: 96px;
     }
   }

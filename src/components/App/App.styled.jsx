@@ -5,6 +5,5 @@ export const AppStyled = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
   height: 100vh;
 `;
