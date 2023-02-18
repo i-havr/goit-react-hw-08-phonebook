@@ -90,7 +90,6 @@ export const NavLinkStyled = styled(NavLink)`
   &.active {
     color: #e6dfd9;
     outline: 2px solid #e6dfd9;
-    /* border: 1px solid #e6dfd9; */
     border-radius: 4px;
     text-decoration: none;
   }

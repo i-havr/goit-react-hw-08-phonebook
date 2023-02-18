@@ -12,9 +12,6 @@ export const ImageWrapperStyled = styled.div`
     max-width: 400px;
   }
 
-  @media screen and (max-width: 1200px) {
-  }
-
   @media screen and (min-width: 1200px) {
     margin-bottom: 16px;
     padding-bottom: 32px;
@@ -29,12 +26,6 @@ export const TextStyled = styled.p`
   color: #7a7067;
   font-size: 14px;
   font-style: italic;
-
-  @media screen and (max-width: 767px) {
-  }
-
-  @media screen and (max-width: 1200px) {
-  }
 
   @media screen and (min-width: 1200px) {
     left: 5%;

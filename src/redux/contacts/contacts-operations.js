@@ -27,9 +27,7 @@ export const addContact = createAsyncThunk(
       return data;
     } catch (error) {
       return rejectWithValue(
-        `Whoops, ${error.response.statusText.toLowerCase()} (${
-          error.response.status
-        })`
+        `Whoops, ${error.response.statusText.toLowerCase()}`
       );
     }
   }
@@ -43,9 +41,21 @@ export const deleteContact = createAsyncThunk(
       return data;
     } catch (error) {
       return rejectWithValue(
-        `Whoops, ${error.response.statusText.toLowerCase()} (${
-          error.response.status
-        })`
+        `Whoops, ${error.response.statusText.toLowerCase()}`
+      );
+    }
+  }
+);
+
+export const editContact = createAsyncThunk(
+  'contacts/editContact',
+  async ({ id, contact }, { rejectWithValue }) => {
+    try {
+      const { data } = await axios.patch(`/contacts/${id}`, contact);
+      return data;
+    } catch (error) {
+      return rejectWithValue(
+        `Whoops, ${error.response.statusText.toLowerCase()}`
       );
     }
   }

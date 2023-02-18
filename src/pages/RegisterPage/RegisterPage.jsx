@@ -54,6 +54,7 @@ export default function RegisterPage() {
                 name="name"
                 value={name}
                 onChange={handleChange}
+                autoFocus
               />
             </LabelStyled>
 

@@ -11,6 +11,6 @@ export const ButtonDelete = ({ type = 'button', children, actionHandler }) => {
 
 ButtonDelete.propTypes = {
   type: PropTypes.string,
-  children: PropTypes.string.isRequired,
+  children: PropTypes.any.isRequired,
   actionHandler: PropTypes.func.isRequired,
 };

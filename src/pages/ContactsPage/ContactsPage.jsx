@@ -17,31 +17,44 @@ import ContactForm from 'components/ContactForm.jsx/ContactForm';
 import { ContactsList } from 'components/ContactsList/ContactsList';
 import { Filter } from 'components/Filter/Filter';
 import { Loader } from 'components/Loader/Loader';
+import { ModalEdit } from 'components/ModalEdit/ModalEdit';
+import { selectIsModalOpen } from 'redux/modal/modal-selectors';
 
 export default function ContactsPage() {
   const isLoading = useSelector(selectLoadingStatus);
   const error = useSelector(selectError);
+  const isModalOpen = useSelector(selectIsModalOpen);
 
   useEffect(() => {
     error && notifyError(error);
   }, [error]);
+
+  if (isModalOpen) {
+    document.body.classList.add('modal-open');
+  } else {
+    document.body.classList.remove('modal-open');
+  }
+
   return (
-    <ContactsPageStyled>
-      <SectionStyled>
-        <ContainerStyled>
-          <h1>This is Your Phonebook</h1>
-          <p>You can add, delete and search contacts. Just try!</p>
-          <FormWrapperStyled>
-            <ContactForm />
-            <FilterWrapperStyled>
-              <Filter />
-              <ContactsList />
-              {isLoading && <Loader />}
-            </FilterWrapperStyled>
-          </FormWrapperStyled>
-          <Toaster />
-        </ContainerStyled>
-      </SectionStyled>
-    </ContactsPageStyled>
+    <>
+      {isModalOpen && <ModalEdit />}
+      <ContactsPageStyled>
+        <SectionStyled>
+          <ContainerStyled>
+            <h1>This is Your Phonebook</h1>
+            <p>You can add, edit and delete your contacts!</p>
+            <FormWrapperStyled>
+              <ContactForm />
+              <FilterWrapperStyled>
+                <Filter />
+                <ContactsList />
+                {isLoading && <Loader />}
+              </FilterWrapperStyled>
+            </FormWrapperStyled>
+            <Toaster />
+          </ContainerStyled>
+        </SectionStyled>
+      </ContactsPageStyled>
+    </>
   );
 }

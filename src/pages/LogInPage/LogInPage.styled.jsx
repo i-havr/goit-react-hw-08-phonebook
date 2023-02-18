@@ -11,15 +11,6 @@ export const SectionStyled = styled.section`
   display: block;
   max-width: 1600px;
   padding: 64px 0px;
-
-  @media screen and (max-width: 768px) {
-  }
-
-  @media screen and (max-width: 1200px) {
-  }
-
-  @media screen and (min-width: 1200px) {
-  }
 `;
 
 export const ContainerStyled = styled.div`
@@ -65,12 +56,6 @@ export const FormStyled = styled.form`
   @media screen and (min-width: 480px) {
     min-width: 300px;
     padding: 32px;
-  }
-
-  @media screen and (max-width: 1200px) {
-  }
-
-  @media screen and (min-width: 1200px) {
   }
 
   & > button {

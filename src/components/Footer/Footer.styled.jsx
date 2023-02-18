@@ -11,24 +11,12 @@ export const FooterStyled = styled.footer`
   @media screen and (min-width: 768px) {
     padding: 14px 0px;
   }
-
-  @media screen and (max-width: 1200px) {
-  }
-
-  @media screen and (min-width: 1200px) {
-  }
 `;
 
 export const FooterContentStyled = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding: 0px 4px;
-
-  @media screen and (max-width: 767px) {
-  }
-
-  @media screen and (max-width: 1200px) {
-  }
 
   @media screen and (min-width: 1200px) {
     padding: 0px 128px;
@@ -42,11 +30,5 @@ export const FooterTextStyled = styled.p`
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
-  }
-
-  @media screen and (max-width: 1200px) {
-  }
-
-  @media screen and (min-width: 1200px) {
   }
 `;

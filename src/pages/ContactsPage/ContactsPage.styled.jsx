@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const ContactsPageStyled = styled.main`
   display: block;
   width: 100%;
-  /* height: 100%; */
 `;
 
 export const SectionStyled = styled.section`
@@ -12,15 +11,6 @@ export const SectionStyled = styled.section`
   margin-left: auto;
   margin-right: auto;
   padding: 64px 0px;
-
-  @media screen and (max-width: 768px) {
-  }
-
-  @media screen and (max-width: 1200px) {
-  }
-
-  @media screen and (min-width: 1200px) {
-  }
 `;
 
 export const ContainerStyled = styled.div`

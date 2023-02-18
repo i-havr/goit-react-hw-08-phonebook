@@ -13,12 +13,6 @@ export const HeaderStyled = styled.header`
   @media screen and (min-width: 768px) {
     padding: 16px 0px;
   }
-
-  @media screen and (max-width: 1200px) {
-  }
-
-  @media screen and (min-width: 1200px) {
-  }
 `;
 
 export const HeaderContentStyled = styled.div`
@@ -62,9 +56,6 @@ export const LinkStyled = styled(Link)`
       margin: 0px;
       margin-right: 4px;
     }
-  }
-
-  @media screen and (max-width: 1200px) {
   }
 
   @media screen and (min-width: 1200px) {

@@ -50,6 +50,7 @@ export default function LogInPage() {
                 name="email"
                 value={email}
                 onChange={handleChange}
+                autoFocus
               />
             </LabelStyled>
 

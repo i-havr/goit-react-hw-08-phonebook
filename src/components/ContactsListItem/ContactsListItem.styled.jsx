@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 export const ContactsListItemStyled = styled.li`
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+ 
   max-width: 100%
-  /* margin-bottom: 5px; */
   padding-right: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -21,14 +21,46 @@ export const ContactsListItemStyled = styled.li`
     padding: 0;
 margin-right: 8px;
   }
-  /* &::before {
-    content: '';
-    width: 10px;
-    height: 10px;
-    margin-right: 10px;
-    border-radius: 50%;
-    background-color: #729599;
-  } */
+
+  & > button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+
+  &:not(:last-child){
+  margin-right: 4px;
+  }
+
+    &:hover{
+    max-width: 100px;
+    padding: 8px;
+    }
+
+    &>svg{
+      opacity: 1;
+    }
+    & > p {
+      transition: all 0.3s ease;
+      display: none;
+      opacity: 0;
+    }
+
+
+
+    
+
+    &:hover svg {
+        display: none;
+        opacity: 0;
+    }
+    &:hover p {
+        display: inline;
+        opacity: 1;
+    }
+
+  
+  }
 `;
 
 export const InnerElementStyled = styled.span`
@@ -36,7 +68,7 @@ export const InnerElementStyled = styled.span`
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  width: 100%;
   color: black;
+  margin-right: auto;
   font-size: 14px;
 `;

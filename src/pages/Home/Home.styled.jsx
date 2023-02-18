@@ -11,9 +11,6 @@ export const SectionStyled = styled.section`
   @media screen and (min-width: 768px) {
   }
 
-  @media screen and (max-width: 1200px) {
-  }
-
   @media screen and (min-width: 1200px) {
     max-width: 1600px;
     padding: 32px 0px 32px 0px;
@@ -46,21 +43,10 @@ export const TextWrapperStyled = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  /* padding-left: 16px;
-  padding-right: 16px; */
   font-size: 14px;
 
   & > p:not(:last-child) {
     margin-bottom: 16px;
-  }
-
-  @media screen and (max-width: 767px) {
-    /* margin-bottom: 30px; */
-  }
-
-  @media screen and (max-width: 1200px) {
-    /* padding-top: 60px;
-    padding-bottom: 60px; */
   }
 
   @media screen and (min-width: 1200px) {
@@ -74,6 +60,5 @@ export const TextWrapperStyled = styled.div`
 `;
 
 export const LinkStyled = styled(Link)`
-  /* font-weight: bold; */
   color: #729599;
 `;

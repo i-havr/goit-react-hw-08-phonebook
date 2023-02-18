@@ -21,11 +21,6 @@ export const NavLinkStyled = styled(NavLink)`
     font-size: 16px;
   }
 
-  @media screen and (max-width: 1200px) {
-    /* padding-top: 60px;
-    padding-bottom: 60px; */
-  }
-
   @media screen and (min-width: 1200px) {
     &:not(:last-child) {
       margin-right: 8px;
