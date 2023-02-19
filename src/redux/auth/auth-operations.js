@@ -21,11 +21,7 @@ export const register = createAsyncThunk(
       token.set(data.token);
       return data;
     } catch (error) {
-      notifyError(
-        `Whoops, ${error.response.statusText.toLowerCase()} (${
-          error.response.status
-        })`
-      );
+      notifyError('Most likely, such a user is already registered');
       return rejectWithValue('Error: ', error.response.status);
     }
   }
