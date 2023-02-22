@@ -47,17 +47,29 @@ export const EditForm = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    const newValues = { name: changedName, number: changedNumber };
 
     if (
       contacts.some(
         contact =>
-          contact.name === newValues.name && contact.number === newValues.number
+          contact.id === contactId &&
+          contact.name === changedName &&
+          contact.number === changedNumber
       )
     ) {
       return alert(`You haven't made any changes!`);
+    } else if (
+      contacts.some(
+        contact => contact.id !== contactId && contact.name === changedName
+      )
+    ) {
+      return alert(`${changedName} is already in contacts.`);
     } else {
-      dispatch(editContact({ id: contactId, contact: { ...newValues } }));
+      dispatch(
+        editContact({
+          id: contactId,
+          contact: { name: changedName, number: changedNumber },
+        })
+      );
       dispatch(setModal());
     }
   };
